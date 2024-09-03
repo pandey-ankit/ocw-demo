@@ -25,26 +25,26 @@ In this lab, you will:
 ## Task 1: Enable Kubernetes Horizontal Pod Autoscaler
 
 1. In the terminal, go to the terminal named **HPA-Pods**. Copy and paste the commands below to enable the Kubernetes Horizontal Pod Autoscaler. This configures **HPA** to scale out the WebLogic cluster when the average current session count exceeds 5 per managed server pod.
- ```bash
-    <copy>kubectl apply -f customhpa.yaml</copy>
- ```
+      ```bash
+         <copy>kubectl apply -f customhpa.yaml</copy>
+      ```
 
 ## Task 2: Observe the replica status
 
 1. let's verify the HPA configuration by copying and pasting the following command in the **HPA-Pods** tab in the terminal.
- ```bash
-    <copy>kubectl get hpa -n test-domain-ns -w</copy>
- ```
- ![hpa config](images/hpa-conifg.png)
+      ```bash
+         <copy>kubectl get hpa -n test-domain-ns -w</copy>
+      ```
+      ![hpa config](images/hpa-conifg.png)
 
 
 2. In the **Server Pods** tab in the terminal, copy and paste the following command to view the server pods in the WebLogic domain  **test-domain**. 
- ```bash
-    <copy>kubectl get pods -n test-domain-ns -w</copy>
- ```
+      ```bash
+         <copy>kubectl get pods -n test-domain-ns -w</copy>
+      ```
 
- ![initial pods](images/initial-pods.png)
-    > As we have configure minimum replica **2**, so we have 2 managed server pods are running.
+      ![initial pods](images/initial-pods.png)
+      > As we have configure minimum replica **2**, so we have 2 managed server pods are running.
 
 ## Task 3: Create HTTP request to Opdemo Application
 
@@ -101,9 +101,9 @@ In this lab, you will:
 ## Task 7: Disable Kubernetes Horizontal Pod Autoscaler
 
 1. In the terminal, go to the terminal named **HPA-Pods**. Copy and paste the commands below to disable the Kubernetes Horizontal Pod Autoscaler. 
- ```bash
-    <copy>kubectl delete -f customhpa.yaml</copy>
- ```
+      ```bash
+         <copy>kubectl delete -f customhpa.yaml</copy>
+      ```
 
 
 ## Acknowledgements

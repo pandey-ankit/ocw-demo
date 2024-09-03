@@ -71,43 +71,42 @@ In this lab, you will:
  ![deploy domain](images/deploy-domain.png)
 
 4. Go back to Terminal and Open the tab titled **Servers Pods** and copy and paste the below command to view the pods status.
- ````bash
-    <copy>kubectl get pods -n test-domain-ns -w</copy>
- ````
+      ```bash
+      <copy>kubectl get pods -n test-domain-ns -w</copy>
+      ```
 
- ![pods status](images/pod-status.png)
+      ![pods status](images/pod-status.png)
 
 ## Task 4: Upgrade WebLogic Server version from 12.2.1.4 to 14.1.1.0
 
 1. Go back to WebLogic Kubernetes Toolkit UI, and click **WebLogic Domain**. Change the WebLogic Server Tag to **lhr.ocir.io/lrv4zdykjqrj/weblogic:14.1.1.0-slim-8-ol8** and then click **Deploy Domain**. Once Deployment is done, Click **Ok**.
 
- ```bash
-    <copy>lhr.ocir.io/lrv4zdykjqrj/weblogic:14.1.1.0-slim-8-ol8</copy>
- ```
- ![upgrade version](images/upgrade-version.png)
+      ```bash
+         <copy>lhr.ocir.io/lrv4zdykjqrj/weblogic:14.1.1.0-slim-8-ol8</copy>
+      ```
+      ![upgrade version](images/upgrade-version.png)
 
     > **Downgrade WebLogic Cluster**-<br>
     > If you already have **WebLogic 14.1.1.0** as the Primary Image, you can copy and paste the below image tag, to show downgrade WebLogic Domain. 
 
     > ```bash
      <copy>lhr.ocir.io/lrv4zdykjqrj/weblogic:12.2.1.4-slim-ol8</copy>
- ```
+      ```
 
 2. Go back to Terminal and Open the tab titled **Servers Pods** and copy and paste the below command to view the pods status.
- ````bash
-    <copy>kubectl get pods -n test-domain-ns -w</copy>
- ````
- ![upgrade server](images/upgrade-server.png)
+      ````bash
+         <copy>kubectl get pods -n test-domain-ns -w</copy>
+      ````
+      ![upgrade server](images/upgrade-server.png)
 
 ## Task 5: Clean up
 
 1. Change the replica from **3** to **2** and click **OK** to scale in and change the WebLogic Server Tag to **lhr.ocir.io/lrv4zdykjqrj/weblogic:12.2.1.4-slim-ol8** and then click **Deploy Domain**.
 
-    > ```bash
-     <copy>lhr.ocir.io/lrv4zdykjqrj/weblogic:12.2.1.4-slim-ol8</copy>
- ```
-
- > It will clean the demo environment, allowing you to use it to demonstrate scaling out and upgrading the WebLogic domain. 
+>  ```bash
+   <copy>lhr.ocir.io/lrv4zdykjqrj/weblogic:12.2.1.4-slim-ol8</copy>
+   ```
+   It will clean the demo environment, allowing you to use it to demonstrate scaling out and upgrading the WebLogic domain. 
  
 
 ## Acknowledgements
