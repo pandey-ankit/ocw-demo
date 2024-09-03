@@ -38,7 +38,7 @@ In this lab, you will:
 
 ## Task 2: Show Modernise Best Bank application working
 
-This is extended version of application, where we have created a CreditScore Microservice in Helidon MP. We are also using **Coherence Cache** for storing customer credit score. So for any customer, when you click **View** button first time, our code generates random credit score and store it in the  Coherence Cache. Now, when you again click **View** button for the same customer, It provide the credit score from coherence cache.
+This is extended version of application, where we have created a CreditScore Microservice in **Helidon MP**. We are also using **Coherence Cache** for storing customer credit score. So for any customer, when you click **View** button first time, our code generates random credit score and store it in the  Coherence Cache. Now, when you again click **View** button for the same customer, It provide the credit score from coherence cache.
 
 1. In the firefox, open a new tab and click second bookmark **New App**.
     ![new app](images/new-app.png)

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, we explored extending our application using Helidon and Coherence to enhance its functionality. We began by utilizing the Quickstart wizard to set up a Helidon MP project and integrated a new endpoint for the CreditScore service. Additionally, we used Coherence for efficient credit score storage in the Coherence Cache and demonstrated the corresponding updates made to the WebLogic application.
+In this lab, we explored the steps taken to extending our application using Helidon and Coherence to enhance its functionality. We began by utilizing the Quickstart wizard to set up a Helidon MP project and integrated a new endpoint for the CreditScore service. Additionally, we used Coherence Cache for efficient credit score storage and demonstrated the corresponding updates made to the WebLogic application.
 
 Estimated Time: 10 minutes
 
@@ -11,7 +11,7 @@ Watch the video below for a quick walk-through of the lab.
 
 ### Objectives
 
-In this lab, you will:
+In this lab, we will review:
 
 * Creation of Helidon MP
 * Creation of CreditScore Service - Key areas of code
