@@ -103,10 +103,10 @@ In this lab, you will:
 
 1. Change the replica from **3** to **2** and click **OK** to scale in and change the WebLogic Server Tag to **lhr.ocir.io/lrv4zdykjqrj/weblogic:12.2.1.4-slim-ol8** and then click **Deploy Domain**.
 
->  ```bash
-   <copy>lhr.ocir.io/lrv4zdykjqrj/weblogic:12.2.1.4-slim-ol8</copy>
-   ```
-   It will clean the demo environment, allowing you to use it to demonstrate scaling out and upgrading the WebLogic domain. 
+      >  ```bash
+         <copy>lhr.ocir.io/lrv4zdykjqrj/weblogic:12.2.1.4-slim-ol8</copy>
+         ```
+      It will clean the demo environment, allowing you to use it to demonstrate scaling out and upgrading the WebLogic domain. 
  
 
 ## Acknowledgements
