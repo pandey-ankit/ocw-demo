@@ -1,0 +1,86 @@
+# Explore Source code of JAVA EE and Helidon application 
+
+## Introduction
+
+In this lab, we explored extending our application using Helidon and Coherence to enhance its functionality. We began by utilizing the Quickstart wizard to set up a Helidon MP project and integrated a new endpoint for the CreditScore service. Additionally, we used Coherence for efficient credit score storage in the Coherence Cache and demonstrated the corresponding updates made to the WebLogic application.
+
+Estimated Time: 10 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Upgrade WebLogic Server Version](videohub:1_5vonezmn)
+
+### Objectives
+
+In this lab, you will:
+
+* Creation of Helidon MP
+* Creation of CreditScore Service - Key areas of code
+* Addition of Coherence CE
+* Extension of WebLogic App
+
+### Prerequisites
+
+* Access to noVNC Remote Desktop created in lab 1.
+
+## Task 1: Creation of Helidon MP
+
+1. Created the project sources using Helidon MP Maven archetypes.   
+    ```bash
+    <copy>mvn archetype:generate -DinteractiveMode=false \
+    -DarchetypeGroupId=io.helidon.archetypes \
+    -DarchetypeArtifactId=helidon-quickstart-mp \
+    -DarchetypeVersion=4.0.5 \
+    -DgroupId=io.helidon.bestbank \
+    -DartifactId=helidon-creditscore-mp \
+    -Dpackage=io.helidon.bestbank.creditscore</copy>
+    ```
+
+
+## Task 2: Creation of CreditScore Service - Key areas of code
+
+1. We created the **CreditScore** service, which provides credit score of the selected customer.
+    ![get creditscore](images/get-creditscore.png)
+
+2. We calculate the creditscore based on given personal information.
+    ![calculate creditscore](images/calculate-creditscore.png)
+
+
+## Task 3: Addition of Coherence CE
+
+1. We modified the **CreditScore** service to use Coherence cache for storing creditscore of customer as explained in the source code.
+    ![coherence creditscore](images/coherence-creditscore.png)
+
+
+2. We added dependency for coherence as explained in the source code.
+    ![coherence pom](images/coherence-pom.png)
+
+
+## Task 4: Extension of WebLogic Application
+
+For Best Bank Web Application to consume Microservice, the following changes has been made:
+
+* Modified the User Interface. Create View button which opens Account Owner details window. This detail window will show the credit score value of the Account Owner.
+* Modified the server side bean to invoke Credit Score Microservices Application.
+* Configured the endpoint for the Bank Web Application.
+
+1. Modification in the User Interface.
+    ![user interface](images/user-interface.png)
+
+2. Modification in the **Server Side Bean**.   
+    - The postConstruct method modified to read the end point URL from the property file.
+        ![read properties](images/read-properties.png)
+    - New getCreditScore method created to calculate the credit score value of the Account Owner.
+        ![creditscore method](images/creditscore-method.png)
+    - Finally include the new method invocation in getSelectedAccountOwner method which is triggered by the View button on the User Interface.
+        ![call creditscore](images/call-creditscore.png)
+
+3. Configure End-Point.
+    - The Bank Web Application reads this properties file to know the endpoint's URL. Obviously this solution is just for demo purposes, because in real microservices architecture the best practice is to use additional tools for better service/API management.
+        ![app properties](images/app-properties.png)
+
+
+## Acknowledgements
+
+* **Author** -  Ankit Pandey
+* **Contributors** - Sid Joshi, Maciej Gruszka 
+* **Last Updated By/Date** - Ankit Pandey, September 2024

@@ -1,0 +1,21 @@
+{
+    "workshoptitle": "Oracle Cloud World 2024 - ECNJ Demo",
+    "help": "livelabs-help-weblogic_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Demo 1: Modernise with WebLogic, Helidon and Coherence",
+            "type": "freetier",
+            "filename": "../../bestbank/bestbank.md"
+        },
+        {
+            "title": "(Optional) Demo 2: Explore Source code of JAVA EE and Helidon application",
+            "type": "freetier",
+            "filename": "../../source-code/source-code.md"
+        },
+        {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+   ]
+}
