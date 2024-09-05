@@ -10,6 +10,7 @@ The very purpose of writing microservices is to do a small piece of job efficien
 * The user data is not coming from the database
 * The Helidon Microservice written in the lab can be deployed on Docker/Kubernetes, but for this demo, we only run it from the JVM locally
 
+[](videohub:1_o3hf75h1)
 Estimated Time: 10 minutes
 
 

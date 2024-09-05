@@ -5,6 +5,7 @@
 We have deployed the WebLogic **opdemo** application. In this lab, we will access the application and explore WebLogic Kubernetes Toolkit UI and WebLogic Remote Console.
  ![lab flow](images/lab-flow.png)
 
+[](videohub:1_4r622c5o)
 Estimated Time: 15 minutes
 
 ### Prerequisites

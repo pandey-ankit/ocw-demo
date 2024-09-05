@@ -4,6 +4,7 @@
 
 In this lab, we will demonstrate how to scale a WebLogic cluster using the Kubernetes Horizontal Pod Autoscaler (HPA) based on WebLogic metrics provided by the Monitoring Exporter. 
 
+[](videohub:1_h8go4sie)
 Estimated Time: 20 minutes
 
 ### Objectives
